@@ -1,7 +1,7 @@
 ﻿using GerenciadorCondominios.BLL;
 using GerenciadorCondominios.BLL.Models;
-using GerenciadorCondominios.DAL.Mapeamentos;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using GerenciadorCondominios.DAL.Mapeamentos;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
