@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace GerenciadorCondominios.ViewModells
+{
+    public class RegistroViewModels
+    {
+        [Required(ErrorMessage ="O campo {0} é obrigatório")]
+        [StringLength(40, ErrorMessage="Máximo 40 caracteres")]
+        public string Nome { get; set; }
+        
+        [Required(ErrorMessage = "O campo {0} é obrigatório")]
+        public string CPF { get; set; }
+
+        [Required(ErrorMessage = "O campo {0} é obrigatório")]
+        public string Telefone { get; set; }
+       
+        public string Foto { get; set; }
+
+        [Required(ErrorMessage = "O campo {0} é obrigatório")]
+        [StringLength(40, ErrorMessage = "Máximo 40 caracteres")]
+        [EmailAddress(ErrorMessage ="Email inválido")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "O campo {0} é obrigatório")]
+        [StringLength(40, ErrorMessage = "Máximo 40 caracteres")]
+        [DataType(DataType.Password)]
+        public string Senha { get; set; }
+
+        [Required(ErrorMessage = "O campo {0} é obrigatório")]
+        [StringLength(40, ErrorMessage = "Máximo 40 caracteres")]
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirme sua senha")]
+        [Compare("Senha", ErrorMessage ="Senha não confere")]
+        public string SenhaConfirmada { get; set; }
+
+    }
+}
